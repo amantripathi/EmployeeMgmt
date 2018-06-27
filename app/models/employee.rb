@@ -27,7 +27,7 @@ class Employee < ApplicationRecord
       hierarchy << manager
       manager = manager.superior
     end
-    hierarchy.as_json(:except => [:created_at, :updated_at])
+    hierarchy
   end
 
   private
